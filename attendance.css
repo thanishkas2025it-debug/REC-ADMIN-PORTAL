@@ -1,0 +1,352 @@
+/* ATTENDANCE */
+
+.attendance-summary {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.attendance-stat {
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+
+}
+
+
+.attendance-stat small {
+
+    color: #999;
+
+    font-size: 11px;
+
+}
+
+
+.attendance-stat h2 {
+
+    margin-top: 3px;
+
+    font-size: 25px;
+
+}
+
+
+.attendance-stat-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.attendance-stat-icon.present {
+
+    background: #e5f8ee;
+
+    color: #159957;
+
+}
+
+
+.attendance-stat-icon.absent {
+
+    background: #ffe8e7;
+
+    color: #E53935;
+
+}
+
+
+.attendance-stat-icon.percentage {
+
+    background: #eee5fa;
+
+    color: #5B2DA3;
+
+}
+
+
+/* CONTROLS */
+
+.attendance-controls {
+
+    display: grid;
+
+    grid-template-columns: 180px 220px 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.attendance-controls label {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #777;
+
+    margin-bottom: 7px;
+
+}
+
+
+.attendance-controls input,
+.attendance-controls select {
+
+    width: 100%;
+
+    height: 42px;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 8px;
+
+    padding: 0 12px;
+
+    outline: none;
+
+    font-size: 11px;
+
+}
+
+
+.attendance-controls input:focus,
+.attendance-controls select:focus {
+
+    border-color: #5B2DA3;
+
+}
+
+
+/* TABLE */
+
+.attendance-table-card {
+
+    padding: 20px;
+
+}
+
+
+.attendance-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.attendance-title h3 {
+
+    font-size: 17px;
+
+}
+
+
+.attendance-title p {
+
+    color: #999;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+
+}
+
+
+.save-attendance-btn {
+
+    border: none;
+
+    background: #5B2DA3;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+.save-attendance-btn:hover {
+
+    background: #452080;
+
+}
+
+
+/* STUDENT */
+
+.attendance-student {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.attendance-avatar {
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    background: #eee5fa;
+
+    color: #5B2DA3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 600;
+
+}
+
+
+.attendance-student strong {
+
+    display: block;
+
+    font-size: 11px;
+
+}
+
+
+.attendance-student small {
+
+    color: #999;
+
+    font-size: 9px;
+
+}
+
+
+/* RADIO BUTTONS */
+
+.attendance-buttons {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.attendance-buttons button {
+
+    border: none;
+
+    padding: 7px 12px;
+
+    border-radius: 7px;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+}
+
+
+.present-btn {
+
+    background: #e5f8ee;
+
+    color: #159957;
+
+}
+
+
+.absent-btn {
+
+    background: #ffe8e7;
+
+    color: #E53935;
+
+}
+
+
+.attendance-buttons button.selected {
+
+    outline: 2px solid currentColor;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+
+    .attendance-summary {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .attendance-controls {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .attendance-title {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+}

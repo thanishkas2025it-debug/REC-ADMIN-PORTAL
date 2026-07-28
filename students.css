@@ -1,0 +1,618 @@
+/* ==========================================
+   STUDENTS PAGE
+========================================== */
+
+.students-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+
+.students-header h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.students-header p {
+
+    color: #999;
+
+    font-size: 12px;
+
+}
+
+
+/* ADD BUTTON */
+
+.add-student-btn {
+
+    border: none;
+
+    background: #5B2DA3;
+
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.add-student-btn:hover {
+
+    background: #452080;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ==========================================
+   SEARCH TOOLS
+========================================== */
+
+.student-tools {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.search-box {
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 0 15px;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex: 1;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+
+}
+
+
+.search-box i {
+
+    color: #999;
+
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 12px;
+
+}
+
+
+.student-tools select {
+
+    width: 210px;
+
+    border: none;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 0 15px;
+
+    outline: none;
+
+    color: #555;
+
+}
+
+
+/* ==========================================
+   TABLE
+========================================== */
+
+.student-table-card {
+
+    padding: 20px;
+
+}
+
+
+.student-count {
+
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    color: #777;
+
+}
+
+
+.student-count strong {
+
+    color: #5B2DA3;
+
+}
+
+
+#studentTable {
+
+    min-width: 850px;
+
+}
+
+
+#studentTable th {
+
+    padding: 14px;
+
+}
+
+
+#studentTable td {
+
+    padding: 14px;
+
+}
+
+
+.student-name {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.student-avatar {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #eee5fa;
+
+    color: #5B2DA3;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 600;
+
+}
+
+
+.student-name strong {
+
+    display: block;
+
+    color: #333;
+
+    font-size: 11px;
+
+}
+
+
+.student-name small {
+
+    color: #999;
+
+    font-size: 9px;
+
+}
+
+
+.attendance-good {
+
+    color: #159957;
+
+    font-weight: 600;
+
+}
+
+
+.attendance-warning {
+
+    color: #d58a00;
+
+    font-weight: 600;
+
+}
+
+
+.status-active {
+
+    background: #e5f8ee;
+
+    color: #159957;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+}
+
+
+.status-inactive {
+
+    background: #ffe8e7;
+
+    color: #E53935;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+}
+
+
+/* ACTION BUTTONS */
+
+.action-btn {
+
+    border: none;
+
+    width: 30px;
+
+    height: 30px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    margin-right: 4px;
+
+}
+
+
+.edit-btn {
+
+    background: #e5efff;
+
+    color: #2563EB;
+
+}
+
+
+.delete-btn {
+
+    background: #ffe8e7;
+
+    color: #E53935;
+
+}
+
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(20, 10, 35, 0.55);
+
+    backdrop-filter: blur(5px);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 2000;
+
+}
+
+
+.modal-overlay.show {
+
+    display: flex;
+
+}
+
+
+.student-modal {
+
+    background: white;
+
+    width: 600px;
+
+    max-width: 92%;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.2);
+
+    animation: modalOpen 0.25s ease;
+
+}
+
+
+@keyframes modalOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px) scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* MODAL HEADER */
+
+.modal-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+}
+
+
+.modal-header h3 {
+
+    font-size: 19px;
+
+}
+
+
+.modal-header p {
+
+    color: #999;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+
+}
+
+
+.close-modal {
+
+    border: none;
+
+    background: #f4f4f6;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+/* FORM */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 17px;
+
+}
+
+
+.form-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.form-field label {
+
+    color: #555;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+}
+
+
+.form-field input,
+
+.form-field select {
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 9px;
+
+    height: 43px;
+
+    padding: 0 12px;
+
+    outline: none;
+
+    font-size: 11px;
+
+}
+
+
+.form-field input:focus,
+
+.form-field select:focus {
+
+    border-color: #5B2DA3;
+
+    box-shadow: 0 0 0 3px #5B2DA315;
+
+}
+
+
+/* MODAL ACTIONS */
+
+.modal-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+}
+
+
+.cancel-btn,
+
+.save-btn {
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+.cancel-btn {
+
+    background: #f1f1f3;
+
+    color: #555;
+
+}
+
+
+.save-btn {
+
+    background: #5B2DA3;
+
+    color: white;
+
+}
+
+
+.save-btn:hover {
+
+    background: #452080;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .students-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .student-tools {
+
+        flex-direction: column;
+
+    }
+
+
+    .student-tools select {
+
+        width: 100%;
+
+        height: 48px;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
