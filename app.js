@@ -1,8 +1,10 @@
-// REC Student Management Portal
-// Login JavaScript
+// ==========================================
+// REC ADMIN PORTAL - LOGIN
+// ==========================================
 
 // SHOW / HIDE PASSWORD
 function togglePassword() {
+
     const password = document.getElementById("password");
 
     if (password.type === "password") {
@@ -12,28 +14,25 @@ function togglePassword() {
     }
 }
 
+
 // LOGIN FUNCTION
 function login() {
 
-    const email = document.querySelector('input[type="email"]').value.trim();
+    // Get values
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
-    // Check empty fields
-    if (email === "" || password === "") {
-        alert("Please enter your email and password.");
-        return;
-    }
+    // Demo login details
+    const correctEmail = "admin@rec.com";
+    const correctPassword = "123456";
 
-    // Demo login
-    const demoEmail = "admin@rec.com";
-    const demoPassword = "123456";
-
-    if (email === demoEmail && password === demoPassword) {
+    // Check login
+    if (email === correctEmail && password === correctPassword) {
 
         alert("Login successful!");
 
         // Open dashboard
-        window.location.href = "./dashboard.html";
+        window.location.href = "dashboard.html";
 
     } else {
 
