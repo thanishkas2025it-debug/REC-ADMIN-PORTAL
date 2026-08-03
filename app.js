@@ -1,11 +1,8 @@
-// ==========================================
 // REC Student Management Portal
 // Login JavaScript
-// ==========================================
 
 // SHOW / HIDE PASSWORD
 function togglePassword() {
-
     const password = document.getElementById("password");
 
     if (password.type === "password") {
@@ -15,11 +12,9 @@ function togglePassword() {
     }
 }
 
-
 // LOGIN FUNCTION
 function login() {
 
-    // Get input values
     const email = document.querySelector('input[type="email"]').value.trim();
     const password = document.getElementById("password").value.trim();
 
@@ -38,7 +33,7 @@ function login() {
         alert("Login successful!");
 
         // Open dashboard
-        window.location.href = "dashboard.html";
+        window.location.href = "./dashboard.html";
 
     } else {
 
